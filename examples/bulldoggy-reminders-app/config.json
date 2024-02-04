@@ -1,0 +1,10 @@
+{
+  "db_path": "reminder_db.json",
+
+  "secret_key": "Pandas are awesome!",
+  
+  "users": {
+    "pythonista": "I<3testing",
+    "engineer": "Muh5devices"
+  }
+}

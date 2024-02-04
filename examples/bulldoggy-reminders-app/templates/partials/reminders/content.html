@@ -1,0 +1,26 @@
+<div class="reminders-content">
+    <div class="reminders-content-lists">
+        <div class="reminders-card paper-card">
+            <h3 class="reminders-card-title">Reminder Lists</h3>
+            <div class="reminders-list-list">
+                {% for reminder_list in reminder_lists %}
+                    {% include "partials/reminders/list-row.html" %}
+                {% endfor %}
+                {% include "partials/reminders/new-list-row.html" %}
+            </div>
+        </div>
+    </div>
+    <div class="reminders-content-items">
+        {% if selected_list %}
+        <div class="reminders-card paper-card">
+            <h3 class="reminders-card-title">{{ selected_list.name }}</h3>
+            <div class="reminders-item-list">
+                {% for reminder_item in selected_list.items %}
+                    {% include "partials/reminders/item-row.html" %}
+                {% endfor %}
+                {% include "partials/reminders/new-item-row.html" %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,3 @@
+[submodule "bulldoggy-reminders-app"]
+	path = examples/bulldoggy-reminders-app
+	url = https://github.com/AutomationPanda/bulldoggy-reminders-app

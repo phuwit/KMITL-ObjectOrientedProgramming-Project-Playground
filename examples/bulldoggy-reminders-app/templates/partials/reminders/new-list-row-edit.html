@@ -1,0 +1,26 @@
+<div
+  class="reminder-row-with-input"
+  data-id="new-reminder-row"
+>
+  <input
+    type="text"
+    placeholder="New list"
+    name="reminder_list_name"
+    autofocus
+  />
+  <img
+    src="/static/img/icons/icon-check-circle.svg"
+    hx-post="/reminders/new-list-row"
+    hx-include="[name='reminder_list_name']"
+    hx-target=".reminders-content"
+    hx-trigger="click, keyup[key=='Enter'] from:[name='reminder_list_name']"
+    hx-swap="outerHTML"
+  />
+  <img
+    src="/static/img/icons/icon-x-circle.svg"
+    hx-get="/reminders/new-list-row"
+    hx-target="[data-id='new-reminder-row']"
+    hx-trigger="click, click from:.reminder-row, keyup[key=='Escape'] from:[name='reminder_list_name']"
+    hx-swap="outerHTML"
+  />
+</div>

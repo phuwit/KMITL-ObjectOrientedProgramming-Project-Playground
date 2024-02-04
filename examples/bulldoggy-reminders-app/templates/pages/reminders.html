@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Reminders | Bulldoggy reminders app</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/shared.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/reminders.css">
+    <script src="/static/js/htmx.min.js"></script>
+</head>
+<body>
+    <div class="title-card paper-card">
+        <div class="title-card-left">
+            <img id="bulldoggy-logo" src="/static/img/logos/bulldoggy-100px.png" />
+            <h1 id="bulldoggy-title">Bulldoggy</h1>
+        </div>
+        <div class="title-card-right">
+            <p id="reminders-message">Reminders for {{ owner }}</p>
+            <form id="logout-form" action="/logout" method="post">
+                <button type="submit">Logout</button>
+            </form>
+        </div>
+    </div>
+    {% include "partials/reminders/content.html" %}
+</body>
+</html>

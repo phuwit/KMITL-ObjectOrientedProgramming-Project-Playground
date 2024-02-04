@@ -1,0 +1,26 @@
+<div
+  class="reminder-row-with-input{{ " completed" if reminder_item.completed }}"
+  data-id="reminder-item-row-{{ reminder_item.id }}"
+  hx-target="this"
+  hx-swap="outerHTML"
+>
+  <input
+    type="text"
+    value="{{ reminder_item.description }}"
+    placeholder="{{ reminder_item.description }}"
+    name="new_description"
+    onfocus="this.select();"
+    autofocus
+  />
+  <img
+    src="/static/img/icons/icon-check-circle.svg"
+    hx-patch="/reminders/item-row-description/{{ reminder_item.id }}"
+    hx-include="[name='new_description']"
+    hx-trigger="click, keyup[key=='Enter'] from:[name='new_description']"
+  />
+  <img
+    src="/static/img/icons/icon-x-circle.svg"
+    hx-get="/reminders/item-row/{{ reminder_item.id }}"
+    hx-trigger="click, click from:.reminder-row, keyup[key=='Escape'] from:[name='new_description']"
+  />
+</div>

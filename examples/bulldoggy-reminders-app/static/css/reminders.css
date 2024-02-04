@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  padding: 0% 10%;
+}
+
+@media (max-width:1000px){
+  body {
+    padding: 0% 5%;
+  }
+}
+
+@media (min-width:1500px){
+  body {
+    padding: 0% 15%;
+  }
+}
+
+.title-card {
+  color: black;
+  display: flex;
+  height: 80px;
+  margin: 20px 0;
+}
+
+.title-card-left {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 40%;
+  height: 100%;
+}
+
+.title-card-right {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+}
+
+#bulldoggy-logo {
+  height: 60px;
+}
+
+#bulldoggy-title {
+  margin: 0 20px 0 15px;
+  font-size: 2.25em;
+}
+
+#reminders-message {
+  flex-grow: 1;
+  font-style: italic;
+  font-size: 1.2em;
+  margin: 12px 0 0 40px;
+}
+
+#logout-form {
+  margin: 0 20px 0 0;
+}
+
+.reminders-content {
+  display: flex;
+  height: calc(100vh - 120px);
+}
+
+.reminders-content-lists {
+  background-color: #D0905D;
+  padding: 20px 20px 0 0;
+  width: 40%;
+}
+
+.reminders-content-items {
+  background-color: #D0905D;
+  padding: 20px 0 0 20px;
+  width: 60%;
+}
+
+.reminders-card {
+  padding: 20px;
+}
+
+.reminders-card-title {
+  text-align: center;
+  margin-block-end: 2em;
+}
+
+.reminder-row {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  border-bottom: 1px solid #BBBBBB;
+}
+
+.reminder-row p {
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.reminder-row img,.reminder-row-with-input img {
+  height: 16px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.reminder-row-with-input {
+  display: flex;
+  align-items: center;
+  padding: 0 8px 0 0;
+  border-bottom: 1px solid #BBBBBB;
+}
+
+.reminder-row-with-input input {
+  flex-grow: 1;
+  font-family: PlayfairDisplay;
+  background: #F3F3F3;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: 0px;
+  margin-inline-end: 8px;
+  padding: 0.5em 8px;
+  outline: 0;
+  border: 0;
+  font-size: 1em;
+}
+
+.reminder-row-with-input.selected-list input {
+  background: #FFDBAD;
+}
+
+.reminder-row-with-input.completed input {
+  text-decoration: line-through;
+}
+
+.light-gray-text {
+  color: #808080;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.selected-list {
+  font-weight: bold;
+  background-color: #ffedd5;
+}
+
+button {
+  font-family: PlayfairDisplay;
+  text-transform: uppercase;
+  outline: 0;
+  background: #222222;
+  border: 0;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 0.9em;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover,button:active,button:focus {
+  background: #BC4211;
+}
