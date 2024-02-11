@@ -3,7 +3,7 @@ import Image from 'next/image';
 import AcmeLogo from '@/app/ui/acme-logo';
 import styles from '@/app/ui/home.module.css'
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
-import { lusitana } from './ui/fonts';
+import { lusitana, inter } from './ui/fonts';
 
 export default function Page() {
   return (
@@ -25,6 +25,9 @@ export default function Page() {
               Next.js Learn Course
             </a>
             , brought to you by Vercel.
+          </p>
+          <p className={inter.className} >
+            local inter font!
           </p>
           <Link
             href="/login"
