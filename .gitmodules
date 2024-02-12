@@ -1,3 +1,6 @@
 [submodule "bulldoggy-reminders-app"]
 	path = examples/bulldoggy-reminders-app
 	url = https://github.com/AutomationPanda/bulldoggy-reminders-app
+[submodule "playground-nextjs-dashboard"]
+	path = nextjs/learn/playground-nextjs-dashboard
+	url = https://github.com/phuwit/playground-nextjs-dashboard.git
